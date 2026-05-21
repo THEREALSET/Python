@@ -1,0 +1,386 @@
+PYTHON
+
+print #escreve algo na tela
+
+No Python, caso queira escrever algo na tela, você coloca a mensagem entre aspas simples ou duplas, logo em seguida os parênteses, e antes de tudo o print. Mas para efetuar contas você não usa as aspas, se usar, irá aparecer a conta em vez o resultado.
+
+EX:
+print('Olá, Mundo!') #irá escrever exatamente oque está escrito
+print('7+3') #aqui em vez ed mostrar o resultado vai aparecer exatamente oque está escrito
+#resultado: 7+3
+print(7+3) #aqui vai mostrar o exato resultado do calculo
+#resultado: 10
+
+Isso acontece porque toda escrita dentro e aspas é uma "string", da mesma forma que é no js, então ao tirar as aspas automaticamente se torna um number. Outro exemplo bem interessante é colocando cada valor em suas próprias aspas.
+
+EX:
+print('7'+'4') #aqui o sinal de mais tem o sentido de concatenação, ou seja vai juntar os dois valores
+#resultado: 74
+
+Mas existem horas que em vez do '+', será usada a',', não têm uma hora exata para usar, mas com o tempo você irá se acostumar.
+
+Para construir variáveis, não é necessário dizer nenhuma palavra trás do nome da var como no js, basta dar o nome, e logo em seguida atribuir o que quiser a ela. LEMBRANDO QUE TODA VAR É UM OBJETO!!!
+
+EX:
+nome ='selton' #como no js, aqui os sinais de '=' significam recebe
+#importante lembrar que não é possível dar nomes de vars que se iniciam com algum número
+
+É possível mostrar os valores de cada variável por mensagens.
+
+EX:
+nome ='selton'
+nome2 ='fulano'
+print(nome,nome2)
+#resultado: selton fulano
+
+Para fazer perguntas, utilize input ao invés de print.
+
+EX:
+nome = input('Qual é o seu nome?') #então o valor retornado do input vai ser atribuído ao nome
+idade = input('Qual é a sua idade?')
+print('Idade', idade)
+#o resultado vai ser idade acompanhado do valor digitado na pergunta
+
+Existem 4 tipos cruciais de vars
+int #números inteiros como 7, -4, 0
+float #números com vírgula como 4.5, 0.076, -15,223
+bool #True ou False
+str #palavras comuns(padrão)
+
+EX:
+num1 = input('Digite um número!')
+num2 = input('Digite outro!')
+print('A soma dos dois valores é', num2+num1)
+#resultado: A soma os dois valores é num2num1
+
+Dessa maneira não funciona, pois o tipo padrão de var é str, então o sinal de '+' iria concatenar.
+
+Outra forma de adicionar valores de vars é essa:
+
+EX:
+num1 = float(input('Digite um número!'))
+num2 = float(input('Digite outro!'))
+soma = num1 + num2
+print('A soma vale {}'.format(soma)+'!') #a var escrita dentro dos parênteses de format é a que vai aparecer #dentro das chaves
+
+Para apresentar tipos de vars, use o type.
+
+EX:
+n1 = input('digite')
+print(type(n1))
+#resultado: str(porque é o padrão)
+
+Para adicionar múltiplas vars em prints através de formats é bem simples.
+
+EX:
+num1 = float(input('Digite um número!'))
+num2 = float(input('Digite outro!'))
+soma = num1 + num2
+print('A soma entre {} e {} vale {}'.format(num1, num2, soma))
+ #o valor que vai aparecer em cada chaves depende da ordem dentro do format, sempre respectiva
+
+Com os "is" podemos saber certas características de textos, como o tipo, se tem espaço ou não, entre outros.
+Os "is" retornam se a informação é true ou false
+
+EX:
+num1 = input('Digite algo')
+print(num1.isspace()) #aqui vai retornar true caso seja digitado apenas espaços
+
+Aqui está uma lista de todos os "is"(métodos de strings):
+1.isalnum()
+Retorna True se todos os caracteres da string são alfanuméricos (letras ou números), e a string não está vazia.
+
+2.isalpha()
+Retorna True se todos os caracteres da string são alfabéticos (letras) e a string não está vazia.
+
+3.isascii()
+Retorna True se todos os caracteres da string são caracteres ASCII (valores entre 0 e 127).
+
+4.isdecimal()
+Retorna True se todos os caracteres na string forem dígitos decimais (0-9).
+
+5.isdigit()
+Retorna True se todos os caracteres na string forem dígitos (0-9), ou caracteres numéricos como superescritos e subscritos.
+
+6.isnumeric()
+Retorna True se todos os caracteres da string forem numéricos (incluindo caracteres como numerais romanos e números fracionados).
+
+7.islower()
+Retorna True se todos os caracteres da string estiverem em minúsculas.
+
+8.isprintable()
+Retorna True se todos os caracteres da string forem imprimíveis (não incluem caracteres de controle como novas linhas ou tabulações).
+
+9.isidentifier():
+Verifica se a string é um identificador válido (como um nome de variável em Python).
+
+10.isspace():
+Verifica se todos os caracteres da string são espaços em branco (incluindo espaços, tabs e quebras de linha).
+
+11.istitle():
+Verifica se a string está no formato de título, ou seja, se cada palavra começa com uma letra maiúscula e o restante é minúsculo.
+
+12.isupper():
+Verifica se todos os caracteres da string estão em maiúsculas.
+
+Operadores Aritméticos
++ #Adição ou concatenação EX: 5+2 == 7
+- #Subtração EX: 5-2 == 3
+* #Multiplicação EX: 5*2 == 10
+/ #Divisão EX: 5/2 == 2.5
+** #Potência EX: 5**2 == 25
+// #Divisão inteira EX: 5//2 == 2
+% #Resto da divisão, resto da divisão interrompida até a etapa da vírgula EX: 5%2 == 1
+
+Aqui no Python, o igual é "==". O "=" é um recebe, usamos para atribuir coisas.
+
+Ordem de precedência das expressões aritméticas:
+1.() #Primeiro. São feitas as coisas entre parênteses
+2.** #Segundo. São feitas as potencias
+3.* / // % #Terceiro. São feitos os primeiros que aparecerem
+4. + - #Quarto. São feitos os primeiros que aparecerem
+
+Para calcular raiz quadrada, coloque o valor do número que deseja calcular potenciado a (1/2). O 2 pode se alterar dependendo da raiz que deseja calcular, se fosse raiz cubica, seria (1/3).
+
+EX:
+81**(1/2) #resultado: 9.0 
+
+Também é possível fazer contas básicas com palavras.
+
+EX:
+'ola'*5 #resultado:olaolaolaolaola
+
+Com o .fotmat é possível fazer alinhamentos de palavras dentro de espaços definidos.
+
+EX:
+nome = input('Qual é o seu nome? ')
+
+print('Prazer em te conhecer, {:20}!'.format(nome)) #aqui você colocou nome em 20 espaços
+#resultado: Prazer em te conhecer, nome                !
+
+print('Prazer em te conhecer, {:>20}!'.format(nome)) #aqui você colocou nome em 20 espaços e colou na direita
+#resultado: Prazer em te conhecer,                 nome!
+
+print('Prazer em te conhecer, {:<20}!'.format(nome)) #aqui você colocou nome em 20 espaços e colou na esquerda
+#resultado: Prazer em te conhecer, nome                !
+
+print('Prazer em te conhecer, {:^20}!'.format(nome)) #aqui você colocou nome em 20 espaços de forma centralizada
+#resultado: Prazer em te conhecer,         nome        !
+
+print('Prazer em te conhecer, {:=^20}!'.format(nome)) #aqui você colocou nome em 20 espaços de forma centralizada, e colocou "=" nos espaços vazios
+#resultado: Prazer em te conhecer, ========nome========!
+
+Para fazer quebras de linhas em prints, use o "\n".
+
+EX:
+print('A soma de 1 mais \n2 é \n3')
+#resultado: A soma de 1 mais
+#2 é
+#3
+
+No python, existem as  bibliotecas, que são como extensões da linguagem. Cada biblioteca tem suas funcionalidades, um exemplo é a math, que contém diversas funcionalidades, mas irei apresentar apenas as mais úteis, sendo elas:
+
+ceil #arredonda números para o inteiro maior ou igual ao número, se é 4.7, vai para 5
+floor #arredonda números para o inteiro menor ou igual ao número, se é 4.7, vai para 4
+trunc #elimina da vírgula pra frente(parte decimal)
+pow #calcula potenciação: pow(base, expoente)
+sqrt #calcula raiz quadrada
+factorial #calcula fatorial
+
+Mas para importar essas bibliotecas no seu código você precisa de certos comandos, como:
+import math
+from math import sqrt
+
+EX:
+import math
+num = int(input('digite um número: '))
+raiz = math.sqrt(num)
+print('A raiz de {} é igual a {}'.format(num, raiz))
+#após escolher importar a biblioteca digite nome da biblioteca.funcionalidade, e depois o número/var entre #parênteses
+
+Para importar uma funcionalidade em específico, é bem simples.
+
+EX:
+from math import sqrt, floor, pow
+#para adicionar mais de uma funcionalidade, basta usar a vírgula
+
+Ao importar uma funcionalidade em especifico, sem a biblioteca inteira, não é necessário o biblioteca.
+
+EX:
+from math import trunc
+n = float(input('Digite um número real: ')
+tr = trunc(n) 
+#se a biblioteca inteira fosse importada, a ultima linha seria: tr = math.trunc(n)
+
+Listas
+As listas são como variáveis que suportam mais de um atributo, declaradas usando [].
+
+EX:
+lista = ['Pessoa', 35, 17.2, True]
+
+Podem armazenar tipos variados de vars, como apresentado no exemplo. Cada posição da lista tem um indicie, iniciado no número 0, esses indicies vão dizer a posição em que se encontra determinado elemento da lista.
+
+EX:
+lista = ['Pessoa', 35, 17.2, True]
+# index = 0        1   2     3
+
+Para apresentar/acessar elementos específicos da lista, use nomedalista[indexdoelemento].
+
+EX:
+print(lista[2])
+#resultado: 17.2
+
+É possível também manipular elementos dessas listas.
+
+EX:
+lista[2] = False #agora o elemento de indicie 2 recebeu False
+
+Fatiamento de Listas
+No fatiamento você pode fazer com que aparecem apenas determinados elementos da lista.
+
+EX:
+lista = ['Pessoa', 35, 17.2, True, 26, 72, 83, 37]
+print(lista[1:9:2]) 
+#resultado: [35, True, 72, 37]
+
+O primeiro número dos colchetes dita aonde irá começar, o segundo dita quando vai acabar, e o terceiro dita o "passo".
+
+Analise
+Analisa certos fatores de listas/strings, como tamanho.
+
+EX:
+len(lista) #Vai analisar a quantidade de indicies presentes na lista
+lista.count('a') #vai contar quantas vezes a letra "a" apareceu na lista
+lista.find('palavra') #vai dizer a posição inicial em que encontrou "deo", quando as letras em conjunto não são #achadas, o valor retornado é o -1
+lista.rfind('palavra') #vai iniciar a busca pro palavra pela direita
+'palavra' in lista # vai dizer se existe ou não "palavra" na frase
+
+Transformação
+Altera cadeias de caractéres.
+
+EX:
+texto.replace('Palavra1', 'Palavra2') #Troca onde se localiza "Palavra1" por "Palavra2"
+texto.upper() #Deixa todos as letras em maiúsculas
+texto.lower() #Deixa todas as letras em minúsculas
+texto.capitalize() #Deixa todas as letras em minúsculas exceto a primeira
+texto.strip() #Elimina espaços vazios do inicio e no final da lista
+texto.rstrip() #Elimina os últimos espaços vazios
+texto.lstrip() #Elimina os primeiros espaços vazios
+
+Divisão
+Têm a capacidade de dividir listas
+
+EX:
+texto.split() #Cria uma divisão nos espaços vazios, os elementos que sobrarem vão ser adicionados a uma nova #com elementos separados, organizados na ordem respectiva.
+
+Junção
+Junta uma coisa na outra
+
+EX:
+'-'.join(lista) #Vai juntar os elementos de uma lista, separando eles apenas por um "-"(porque é oque está #entre as aspas simples).
+
+Importante lembrar que strings e listas tem semelhanças, como por exemplo acessar indicies.
+
+EX:
+str = "Pessoa"
+lista = ['P', 'e', 's', 's', 'o', 'a']
+print('Segunda letra da string {}'.format(str[1]))
+print('Segunda letra da lista {}'.format(lista[1]))
+#resultado: Segunda letra da string e
+# Segunda letra da lista e
+
+Condições
+As condições abrem possibilidades para diferentes resultados no Python.
+
+EX:
+carro = int(input('Quantos anos têm o seu carro?'))
+if carro <= 3:
+	print('Carro novo')
+else:
+	print('Carro velho')
+
+As ações que vão acontecer, são definidas se estão dentro do ":" e também se estão com um tab a frente da condição. O if vai dizer a ação que vai acontecer caso a operação depois dele tenha o resultado true, o else diz a ação que vai acontecer caso a operação de if dê resultado false.
+
+O sinal de diferente é feito assim: "!=".
+
+Condições aninhadas
+Condições aninhadas abrem portas para mais de 2 opções.
+
+EX:
+n = int(input('Quanto é 2 elevado a 5?: ')
+if n == 32:
+	print('Acertou! ')
+elif n < 32 and n > 29:
+	print('Errou, era pra ser um pouco mais. ')
+elif n > 32 and n < 36:
+	pritn('Errou, era pra ser um pouco menos. ')
+else:
+	print('E o estudo? Nada ainda?')
+
+Loops
+Os loops são uteis para realizar tarefas repetitivas. Existem 2 tipos de estruturas de repetição:
+
+for x in range(5):
+	print('Olá!') 
+#x é uma variável int criada no próprio laço de repetição atribuída ao valor 0
+#range(5) dita quantas vezes vai se repetir o laço, a contagem é iniciada do 0, a não ser que você dite o #valor antes de dizer o termino. O valor está em cinco, mas a contagem termina no 4.
+for x in range(5, 0, -1):
+	print(x)
+#faz a contagem de traz pra frente, o segundo número é onde vai terminar, o terceiro diz o passo, se é de 1 em #1, 2 em 2, -1 em -1
+
+É possível adicionar listas dentro de outras
+pessoas = [['Pedro',25], ['Maria', 19], ['João', 32]]
+print(pessoas[0][0]) #O primeiro apresenta a lista da pessoa completa, o segundo apresenta o primeiro elemento da lista de tal pessoa em especifico. Resultado: Pedro
+print(pessoas[1][1]) #resultado: 19
+print(pessoas[2][0]) #resultado: João
+print(pessoas[1]) #resultado: ['Maria', 19]
+
+
+
+try:
+	código que vai dizer se vai dar good ou se vai dar bad
+except:
+	deu bad
+else:
+	deu good
+finally:
+	mesmo dando good ou dando bad sa pexte executa
+else e finally são opcionais. Podem existir vários exepts
+
+Para abrir um arquivo no python é usado uma variavel atribuida a função open()
+Nessa função atribuimos dois parametrso, o primeiro sendo o caminho(nome do arquivo) e o segundo é a maneira que vamos abrir ele.
+Existem 5 maneiras de abrir o arquivo:
+'r'	Leitura (padrão). O arquivo deve existir.
+'w'	Escrita. Cria um arquivo novo ou sobrescreve o existente.
+'a'	Acrescentar. Adiciona ao final sem sobrescrever.
+'b'	Binário. Usado com 'r', 'w', ou 'a' para arquivos binários.
+'x'	Criação exclusiva. Retorna erro se o arquivo já existir.
+
+Para ler arquivos, precisamos abrir ele primeiro. Após isso temos diversas maneiras de ler, sendo elas:
+read() Lê o conteúdo completo do arquivo como uma string
+readline() Lê apenas uma linha do arquivo por vez
+readlines() Retorna uma lista onde cada linha do arquivo é um item
+
+Existem também as escritas em arquivos no python que também é necessário estar com o arquivo aberto, as maneiras de escrita são:
+write() Escreve uma string no arquivo
+writelines() Escreve uma lista de strings no arquivo
+Importante lembrar que o metodo de abertura deve estar relacionado com oquer vai fazer(ler o arquivo, escrever) e que é necessário fechar os arquivos após manipula-los para liberar recursos do sistema.
+
+
+organico: adiquirido atravez do trafego orgânico
+quente: adiquirido atravez do tráfego pago
+frio: não tem ideia da sua existencia mas se cadastrou no seu lançamento. Possuem uma baixa taxa de conversão
+
+Macro nichos vc micro nichos
+macro nichos são interreses que muitas pessoas tem(maioria)
+micro nichos  são interreses mais específicos(minoria)
+
+então pesquise  sobre o nicho, entenda o nível de consciencia da audiência, busque referencias, mapeie necessidades da audiencia
+
+espaçamento de titulo para conteudo maior
+inicio do capitulo em um pagina separada pala ele
+quais são as regras da abnt para fazer um e-book
+o-ebook está muito poluído, tire alguns elementos presentes no e-book
+
+
+O hashing verifica se algum dado foi alterado durante uma tranferencia, como uma mensagem. Um dado entra no hash, ele aceita dados de tamanho variável, um bit modificado na entrada produz um valor totalmente diferente na saída. ele é uma função matemática que tem como objetivo receber uma quantidade de dados variados e que sempre irá retornar uma quantidade fixa de caracteres
